@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+    font-family: "Work Sans", sans-serif;
+}
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* scroll-behavior: smooth; */
+}
+::-webkit-scrollbar {
+    display: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+.tabs .line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% / 4);
+    height: 3px;
+    border-radius: 15px;
+    background-color: white;
+    transition: all 0.4s ease;
+}
+.tabs-mobile .line-mobile {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% / 4);
+    height: 3px;
+    border-radius: 15px;
+    background-color: white;
+    transition: all 0.4s ease;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.openHeader {
+    animation: openMenu 0.4s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes openMenu {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 252px;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gradient-banner {
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.block-clock {
+    border-radius: 20px;
+    background: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(5px);
 }
